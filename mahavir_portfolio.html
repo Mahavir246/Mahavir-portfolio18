@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahavir Jain | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Mahavir Jain — IT student, tech enthusiast, and future builder." />
+  <style>
+    :root { --bg:#080808; --panel:#111; --text:#f5f5f5; --muted:#a5a5a5; --line:#262626; --accent:#c9c9c9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1080px, 92%); margin:auto; }
+    header { position:sticky; top:0; z-index:10; background:rgba(8,8,8,.82); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:20px; }
+    .brand { font-size:13px; letter-spacing:.18em; font-weight:800; }
+    nav .links { display:flex; gap:20px; flex-wrap:wrap; font-size:12px; color:var(--muted); }
+    nav .links a:hover { color:white; }
+    .hero { min-height:82vh; display:flex; flex-direction:column; justify-content:center; padding:70px 0; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.24em; font-size:11px; }
+    h1 { font-size:clamp(44px, 9vw, 100px); line-height:.98; letter-spacing:-.06em; margin:18px 0; }
+    h1 span { color:#8f8f8f; }
+    .intro { max-width:600px; color:#bdbdbd; font-size:clamp(15px, 2vw, 18px); }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { border:1px solid #ddd; padding:11px 18px; border-radius:999px; font-size:13px; transition:.2s; display:inline-block; }
+    .btn.primary { background:#f4f4f4; color:#080808; }
+    .btn:hover { transform:translateY(-2px); opacity:.86; }
+    section { padding:76px 0; border-top:1px solid var(--line); }
+    .section-title { font-size:clamp(26px,4vw,40px); letter-spacing:-.04em; margin:0 0 24px; }
+    .about { max-width:720px; color:#c1c1c1; font-size:16px; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .card { background:var(--panel); border:1px solid var(--line); padding:22px; border-radius:16px; }
+    .card h3 { margin:0 0 8px; font-size:16px; }
+    .card p { margin:0; color:var(--muted); font-size:14px; }
+    .vision { font-size:clamp(24px,4vw,44px); max-width:800px; line-height:1.25; letter-spacing:-.03em; }
+    .vision em { color:#929292; font-style:normal; }
+    .socials { display:flex; gap:12px; flex-wrap:wrap; }
+    footer { border-top:1px solid var(--line); padding:24px 0; color:var(--muted); font-size:12px; }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media (max-width:640px) {
+      nav { align-items:flex-start; flex-direction:column; }
+      .hero { min-height:70vh; padding:55px 0; }
+      .grid { grid-template-columns:1fr; }
+      section { padding:55px 0; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      .reveal { opacity:1; transform:none; transition:none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#home">MJ / PORTFOLIO</a>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#vision">Vision</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="home" style="border-top:0">
+      <div class="eyebrow">Student · IT enthusiast · Future builder</div>
+      <h1>MAHAVIR<br><span>JAIN.</span></h1>
+      <p class="intro">Building my skills. Creating my future. A student exploring technology, coding, and ideas that can make a difference.</p>
+      <div class="actions">
+        <a class="btn primary" href="#about">Explore my journey</a>
+        <a class="btn" href="#contact">Connect</a>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="eyebrow">01 / About</div>
+      <h2 class="section-title">A little about me.</h2>
+      <p class="about">I am an Information Technology student with an interest in computers, programming, and innovation. I enjoy learning new things, exploring how technology works, and developing skills step by step. I believe consistency, curiosity, and discipline can turn goals into progress.</p>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="eyebrow">02 / Currently exploring</div>
+      <h2 class="section-title">Skills & interests.</h2>
+      <div class="grid">
+        <article class="card"><h3>Programming</h3><p>Learning code, fundamentals, and problem-solving.</p></article>
+        <article class="card"><h3>Technology</h3><p>Exploring IT, computers, and digital tools.</p></article>
+        <article class="card"><h3>Creative thinking</h3><p>Turning ideas into simple, useful projects.</p></article>
+        <article class="card"><h3>Personal growth</h3><p>Improving communication, discipline, and consistency.</p></article>
+      </div>
+    </section>
+
+    <section id="vision" class="reveal">
+      <div class="eyebrow">03 / Vision</div>
+      <h2 class="section-title">The direction.</h2>
+      <p class="vision">Dream big. Start small. <em>Stay consistent.</em><br>Turning curiosity into knowledge, knowledge into skills, and skills into meaningful work.</p>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="eyebrow">04 / Contact</div>
+      <h2 class="section-title">Let's connect.</h2>
+      <p class="about">Find me on social media or send me a message.</p>
+      <div class="socials">
+        <!-- Replace the placeholder links below with your own links -->
+        <a class="btn" href="https://instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a class="btn" href="mailto:your-email@example.com">Email ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Mahavir Jain · Personal portfolio</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
